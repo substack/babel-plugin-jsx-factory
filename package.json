@@ -1,0 +1,32 @@
+{
+  "name": "babel-plugin-jsx-factory",
+  "version": "1.0.0",
+  "description": "babel plugin for jsx handled by a function h(tagName, attributes, children)",
+  "main": "index.js",
+  "dependencies": {
+    "defined": "^1.0.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/substack/babel-plugin-jsx-factory.git"
+  },
+  "keywords": [
+    "babel",
+    "plugin",
+    "jsx",
+    "factory",
+    "virtual-dom",
+    "vdom",
+    "react"
+  ],
+  "author": "substack",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/substack/babel-plugin-jsx-factory/issues"
+  },
+  "homepage": "https://github.com/substack/babel-plugin-jsx-factory#readme"
+}

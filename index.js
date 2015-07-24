@@ -12,6 +12,15 @@ module.exports = function (babel, opts) {
       if (factory === undefined) throw new Error(
         'factory or jsxPragma must be configured'
       );
+      if (/^[A-Z]/.test(node.openingElement.name.name)) {
+        return t.callExpression(
+          t.identifier(factory),
+          [
+            t.identifier(node.openingElement.name.name),
+            t.objectExpression(node.openingElement.attributes)
+          ]
+        );
+      }
  
       return t.callExpression(
         t.identifier(factory),

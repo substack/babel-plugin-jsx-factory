@@ -1,0 +1,30 @@
+{
+  "name": "whatever",
+  "browserify": {
+    "transform": [
+      [
+        "babelify",
+        {
+          "jsxPragma": "h",
+          "plugins": [
+            "../../index"
+          ]
+        }
+      ]
+    ]
+  },
+  "scripts": {
+    "build": "browserify -d main.js > bundle.js",
+    "start": "ecstatic -p 8000 .",
+    "watch": "watchify main.js -o bundle.js -dv",
+    "dev": "npm run watch & npm run start"
+  },
+  "dependencies": {
+    "ecstatic": "^0.8.0",
+    "main-loop": "^3.1.0",
+    "virtual-dom": "^2.0.1"
+  },
+  "devDependencies": {
+    "babelify": "^6.1.3"
+  }
+}

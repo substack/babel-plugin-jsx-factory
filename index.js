@@ -14,14 +14,13 @@ module.exports = function (babel, opts) {
       );
       if (/^[A-Z]/.test(node.openingElement.name.name)) {
         return t.callExpression(
-          t.identifier(factory),
+          t.identifier(node.openingElement.name.name),
           [
-            t.identifier(node.openingElement.name.name),
             t.objectExpression(node.openingElement.attributes)
           ]
         );
       }
- 
+
       return t.callExpression(
         t.identifier(factory),
         [
@@ -30,7 +29,7 @@ module.exports = function (babel, opts) {
           t.arrayExpression(node.children.map(childf))
         ]
       );
- 
+
       function childf (c) {
         if (c.type === 'JSXElement') {
           return transform(c);

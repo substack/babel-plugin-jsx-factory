@@ -7,9 +7,13 @@
     "defined": "^1.0.0"
   },
   "devDependencies": {
+    "babel-core": "^5.8.5",
+    "js-beautify": "^1.5.10",
+    "tape": "^4.0.1",
+    "virtual-dom": "^2.0.1"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "tape test/*.js"
   },
   "repository": {
     "type": "git",

@@ -1,6 +1,6 @@
 {
   "name": "babel-plugin-jsx-factory",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "babel plugin for jsx handled by a function h(tagName, attributes, children)",
   "main": "index.js",
   "dependencies": {

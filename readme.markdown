@@ -13,7 +13,7 @@ For a string `tagName`, `attributes` object, and an array of `children`.
 Write some code with inline jsx and a virtual dom factory function, in our case
 `h`:
 
-```
+```js
 var h = require('virtual-dom/h');
 var main = require('main-loop');
 var loop = main({ n: 0 }, render, require('virtual-dom'));
@@ -32,7 +32,7 @@ function render (state) {
 
 Then make a package.json:
 
-``` json
+```json
 {
   "name": "whatever",
   "browserify": {
@@ -63,7 +63,7 @@ $ browserify main.js > public/bundle.js
 
 # browserify react example
 
-```
+```js
 var React = require('react')
 var App = React.createClass({
   getInitialState: function () { return { n: 0 } },
